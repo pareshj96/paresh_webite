@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login 5</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <!--<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">-->
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="text-center col-lg-1 col-md-1 ">
+                    <div class=" mb-2 ">
+						<img src="img/logo.jpeg" width="200px">
+					</div>
+                </div>
+                <div class="text-center col-lg-11 col-md-11 pl-md-5">
+                    <h1>Registration</h1>
+                </div>
+            </div>
+           <hr>
+            <div class="container pt-2">
+                <form action="">
+                    <h3 class="text-info">Personal details</h3><hr>
+
+                    <div class="row border border-info">
+                        <div class="col-lg-3 col-md-3 text-center">
+                            <span class="text-input">
+                                <img class= "img" id="img-show" src="img/profile.png">
+                                <input class="text-center " type="file" required
+                                onchange="document.getElementById('img-show').src = window.URL.createObjectURL(this.files[0])"
+                                id="img-input" >
+                            </span>
+                            <div class="radios pb-3 pt-2" >
+                                <div class="form-check form-check-inline" >
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="M" tabindex="1" required>
+                                    <label class="form-check-label" for="inlineRadio1" >Male</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="F" >
+                                    <label class="form-check-label" for="inlineRadio2">Female</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-9 col-md-9">
+                            <div class="row pl-sm-5">
+                                <div class="col-lg-6 col-md-6 text-input mb-2">
+                                    <i class="fa fa-user-circle"></i>
+                                    <input type="text"  name="" placeholder="First Name" tabindex="3" required>
+                                </div>
+                                <div class=" col-lg-6 col-md-6 text-input mb-2">
+                                    <i class="fa fa-user-circle"></i>
+                                    <input type="text"  name="" placeholder="Last Name" tabindex="4" required>
+                                </div>
+                                <div class=" col-lg-6 col-md-6 text-input mb-2">
+                                    <i class="fa fa-at"></i>
+                                    <input type="email"  name="" placeholder="Email Id" tabindex="5" required>
+                                </div>
+                                <div class=" col-lg-6 col-md-6 text-input mb-2">
+                                    <i class="fa fa-mobile"></i>
+                                    <input type="tell" pattern="[0-9]{10}" name="" placeholder="Mobile Number" title="Eneter Phone Number" tabindex="6" required>
+                                </div>
+                                <div class=" col-lg-12 col-md-12 text-input mb-2">
+                                    <i class="fa fa-address-book"></i>
+                                    <input type="text"  name="" placeholder="Address" tabindex="7" required>
+                                </div>
+                                <div class=" col-lg-4 col-md-4 text-input mb-2">
+                                    <i class="fa fa-map-marker"></i>
+                                    <input type="text"  name="" placeholder="State" tabindex="8" required>
+                                </div>
+                                <div class=" col-lg-4 col-md-4 text-input mb-2">
+                                    <i class="fa fa-location-arrow"></i>
+                                    <input type="text"  name="" placeholder="City" tabindex="9" required>
+                                </div>
+                                <div class=" col-lg-4 col-md-4 text-input mb-2">
+                                    <i class="fa fa-map-pin"></i>
+                                    <input type="text"  name="" placeholder="Pincode" tabindex="10" required>
+                                </div>
+                                <div class=" col-lg-6 col-md-6 text-input mb-2">
+                                    <i class="fa fa-unlock"></i>
+                                    <input type="password"  name="" placeholder="Password" tabindex="11" required>
+                                </div>
+                                <div class=" col-lg-6 col-md-6 text-input mb-2">
+                                    <i class="fa fa-lock"></i>
+                                    <input type="password"  name="" placeholder="Confirm Password" tabindex="12" required>
+                                </div>
+                            </div>  
+                        </div>
+                    </div><!--End of persolal details row-->
+                    <hr>
+                    <h3 class="text-info">Academic details</h3>
+                    <hr>
+                    <div class="row border border-info">
+                        <!--Post Graduaction Section-->
+                        <h5 class="col-lg-12 col-md-12 mt-2">
+                            <span class="badge bg-info text-dark">Post Gradution</span></h5>
+                        <div class=" text-input col-lg-4 col-md-4 mb-2">
+                            <i class="fa fa-graduation-cap"></i>
+                            <select required tabindex="13">
+                                <option value="" disabled selected>PG degree</option>
+                                <option value="MCA">MCA</option>
+                                <option value="M-tech">M-tech</option>
+                                <option value="Msc">Msc</option>
+                                <option value="MBA">MBA</option>
+                            </select>
+                        </div>
+                        <div class=" text-input col-lg-4 col-md-4 mb-2 ">
+                            <i class="fa fa-calendar"></i>
+                            <select id="pg-Years" required tabindex="14">
+                                <option value="" disabled selected>Year Of Passing</option>
+                            </select>
+                        </div>
+                        <div class=" col-lg-4 col-md-4 text-input mb-2">
+                            <i class="fa fa-percent"></i>
+                            <input type="text" pattern="[0-9].[0-9]" name="" placeholder="CGPA" tabindex="15" required>
+                        </div>
+                        <!--Graduaction section-->
+                        <h5 class="col-lg-12 col-md-12 mt-2">
+                            <span class="badge bg-info text-dark">Under Gradution</span></h5>
+                        <div class=" text-input col-lg-4 col-md-4 mb-2 ">
+                            <i class="fa fa-graduation-cap"></i>
+                            <select required tabindex="15">
+                                <option value="" disabled selected>UG degree</option>
+                                <option value="MCA">MCA</option>
+                                <option value="M-tech">M-tech</option>
+                                <option value="Msc">Msc</option>
+                                <option value="MBA">MBA</option>
+                            </select>
+                        </div>
+                        <div class=" text-input col-lg-4 col-md-4 mb-2">
+                            <i class="fa fa-calendar"></i>
+                            <select id="ug-Years" required tabindex="16"> 
+                                <option value="" disabled selected>Year Of Passing</option>
+                            </select>
+                        </div>
+                        <div class=" col-lg-4 col-md-4 text-input mb-2">
+                            <i class="fa fa-percent"></i>
+                            <input type="text" pattern="[0-9].[0-9]" name="" placeholder="CGPA" tabindex="17" required>
+                        </div>
+                        <!--HSC-->
+                        <h5 class="col-lg-12 col-md-12 mt-2">
+                            <span class="badge bg-info text-dark">Higher Secondary Certificate</span>
+                        </h5>
+                        <div class="col-lg-4 col-md-4 text-input mb-2">
+                            <i class="fa fa-graduation-cap"></i>
+                            <input type="text"  name="" placeholder="12th Board Name" tabindex="18" required>
+                        </div>
+                        <div class=" text-input col-lg-4 col-md-4 mb-2 ">
+                            <i class="fa fa-calendar"></i>
+                            <select id="hsc-Years" required tabindex="19"  > 
+                                <option value="" disabled selected>Year Of Passing</option>
+                            </select>
+                        </div>
+                        <div class=" col-lg-4 col-md-4 text-input mb-2">
+                            <i class="fa fa-percent"></i>
+                            <input type="text" pattern="[0-9]{2}.[0-9]{2}" name="" placeholder="Percentag" tabindex="20" required>
+                        </div>
+                        <!--SSC-->
+                        <h5 class="col-lg-12 col-md-12 mt-2">
+                            <span class="badge bg-info text-dark">Secondary School Certificate</span>
+                        </h5>
+                        <div class="col-lg-4 col-md-4 text-input mb-2">
+                            <i class="fa fa-graduation-cap"></i>
+                            <input type="text"  name="" placeholder="10th Board Name" tabindex="21" required>
+                        </div>
+                        <div class=" text-input col-lg-4 col-md-4 mb-2">
+                            <i class="fa fa-calendar"></i>
+                            <select id="ssc-Years"  required tabindex="22" aria-placeholder="Year of passing" > 
+                                <option class="op1" value="" disabled selected>Year Of Passing</option>
+                            </select>
+                        </div>
+                        <div class=" col-lg-4 col-md-4 text-input mb-2">
+                            <i class="fa fa-percent"></i>
+                            <input type="text" pattern="[0-9]{2}.[0-9]{2}" name="" placeholder="Percentag" tabindex="23" required>
+                        </div>
+                    </div><!--End of academic details row-->
+                    <div class="row ">
+                        <div class="offset-lg-4 col-lg-4 text-center reg-btn py-5"> 
+                            <button type="submit" class="btn btn-block">Submit Details</button>
+                        </div>
+                    </div>
+                </form><!--End of form-->
+            </div><!--End of Conainer-->
+        </div><!--End of container fluid-->
+
+        <!--script area-->
+        <script type="text/javascript">
+            window.onload = function () {
+                //Reference the DropDownList.
+                var pgYear = document.getElementById("pg-Years");
+                var ugYear = document.getElementById("ug-Years");
+                var hscYear = document.getElementById("hsc-Years");
+                var sscYear = document.getElementById("ssc-Years");
+                
+                //Determine the Current Year.
+                var currentYear = (new Date()).getFullYear();
+         
+                //Loop and add the Year values to DropDownList.
+                for (var i = 2010; i <= currentYear+5; i++) {
+                    var option1 = document.createElement("OPTION");
+                    option1.innerHTML = i;
+                    option1.value = i;
+                    pgYear.appendChild(option1);
+                    var option2 = document.createElement("OPTION");
+                    option2.innerHTML = i;
+                    option2.value = i;
+                    ugYear.appendChild(option2);
+                    var option3 = document.createElement("OPTION");
+                    option3.innerHTML = i;
+                    option3.value = i;
+                    hscYear.appendChild(option3);
+                    var option4 = document.createElement("OPTION");
+                    option4.innerHTML = i;
+                    option4.value = i;
+                    sscYear.appendChild(option4);
+                }
+            };
+        </script>
+    </body>
+</html>
